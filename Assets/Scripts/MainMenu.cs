@@ -7,6 +7,9 @@ public class MainMenu : MonoBehaviour
     // private GameObject clonePlayer;
     private GameObject currentFrame;
     private GameObject nextFrame;
+    [SerializeField] private NetworkManagerAvalon networkManager = null;
+    [Header("UI")]
+    [SerializeField] private GameObject landingPagePanel = null;
 
     // void OnEnable()
     // {
@@ -71,5 +74,11 @@ public class MainMenu : MonoBehaviour
         //             nextFrame.SetActive(true);
         //             Destroy(clonePlayer);
         //         }
+    }
+
+    public void HostLobby()
+    {
+        networkManager.StartHost();
+        landingPagePanel.SetActive(false);
     }
 }
