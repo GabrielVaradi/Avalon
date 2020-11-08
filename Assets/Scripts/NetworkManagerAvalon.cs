@@ -79,4 +79,29 @@ public class NetworkManagerAvalon : NetworkManager
             NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);
         }
     }
+
+    public override void OnStopServer()
+    {
+        RoomPlayers.Clear();
+    }
+
+    private bool IsReadyToStart()
+    {
+        if (numPlayers < minPlayers) { return false; }
+
+        foreach (var player in RoomPlayers)
+        {
+            if (!player.IsReady) { return false; }
+        }
+
+        return true;
+    }
+
+    public void NotifyPlayersOfReadyState()
+    {
+        foreach (var player in RoomPlayers)
+        {
+            player.HandleReadyToStart(IsReadyToStart());
+        }
+    }
 }
