@@ -5987,12 +5987,12 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 1758295051370532489, guid: 93c8dfeb73a2ecb418527fcf40aecc42, type: 3}
+  playerPrefab: {fileID: 7542945787535410261, guid: 468b9b0251908e94dbb4d3bfe6361b96, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
-  menuScene: Assets/Scenes/Lobby.unity
-  roomPlayerPrefab: {fileID: 9201137845161443463, guid: 93c8dfeb73a2ecb418527fcf40aecc42, type: 3}
+  minPlayers: 2
+  roomPlayerPrefab: {fileID: -5143058743304284609, guid: 93c8dfeb73a2ecb418527fcf40aecc42, type: 3}
 --- !u!4 &1729994142
 Transform:
   m_ObjectHideFlags: 0

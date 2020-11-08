@@ -8,7 +8,7 @@ using System.Linq;
 
 public class NetworkManagerAvalon : NetworkManager
 {
-    [SerializeField] private int minPlayers = 6;
+    [SerializeField] private int minPlayers = 2;
     [Header("Room")]
     [SerializeField] private NetworkRoomPlayerAvalon roomPlayerPrefab = null;
     public static event Action OnClientConnected;

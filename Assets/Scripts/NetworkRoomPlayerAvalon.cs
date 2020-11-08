@@ -8,8 +8,8 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
 {
     [Header("UI")]
     [SerializeField] private GameObject lobbyUI = null;
-    [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[4];
-    [SerializeField] private TMP_Text[] playerReadyTexts = new TMP_Text[4];
+    [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[6];
+    [SerializeField] private TMP_Text[] playerReadyTexts = new TMP_Text[6];
     [SerializeField] private Button startGameButton = null;
 
     [SyncVar(hook = nameof(HandleDisplayNameChanged))]
@@ -51,13 +51,6 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
         UpdateDisplay();
     }
 
-    // public override void OnNetworkDestroy()
-    // {
-    //     Room.RoomPlayers.Remove(this);
-
-    //     UpdateDisplay();
-    // }
-
     public override void OnStopClient()
     {
         Room.RoomPlayers.Remove(this);
@@ -66,7 +59,7 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
     }
 
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
-    
+
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
 
     private void UpdateDisplay()
@@ -87,7 +80,7 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
 
         for (int i = 0; i < playerNameTexts.Length; i++)
         {
-            playerNameTexts[i].text = "Waiting For Player...";
+            playerNameTexts[i].text = "Waiting...";
             playerReadyTexts[i].text = string.Empty;
         }
 
@@ -126,6 +119,6 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
     {
         if (Room.RoomPlayers[0].connectionToClient != connectionToClient) { return; }
 
-        Room.StartGame();
+        // Room.StartGame();
     }
 }
