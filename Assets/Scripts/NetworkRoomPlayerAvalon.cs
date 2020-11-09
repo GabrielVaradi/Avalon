@@ -54,23 +54,20 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
 
     public override void OnStopClient()
     {
+        
         Room.RoomPlayers.Remove(this);
-
+        Destroy(room);
         UpdateDisplay();
+        
     }
 
     public void LeaveLobby()
     {
-        if (!isLeader) 
-        { 
-            room.StopClient();
-            Destroy(room);
-        }
-        else 
-        {
-            room.StopHost();
-            Destroy(room);
-        }
+
+        room.StopHost();
+        Destroy(room);
+        
+
     }
 
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
