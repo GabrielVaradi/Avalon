@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     //     }
     // }
 
+
     public void PlayGame() 
     {
         // FindObjectOfType<AudioManager>().IsPlaying("Theme");

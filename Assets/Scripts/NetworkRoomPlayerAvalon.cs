@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class NetworkRoomPlayerAvalon : NetworkBehaviour
@@ -56,6 +57,20 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
         Room.RoomPlayers.Remove(this);
 
         UpdateDisplay();
+    }
+
+    public void LeaveLobby()
+    {
+        if (!isLeader) 
+        { 
+            room.StopClient();
+            Destroy(room);
+        }
+        else 
+        {
+            room.StopHost();
+            Destroy(room);
+        }
     }
 
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
