@@ -15,7 +15,14 @@ public class NetworkManagerAvalon : NetworkManager
     public static event Action OnClientConnected;
     public static event Action OnClientDisconnected;
 
+    [Header("Game")]
+    [SerializeField] private NetworkGamePlayerAvalon gamePlayerPrefab = null;
+    // [SerializeField] private GameObject playerSpawnSystem = null;
+    // [SerializeField] private GameObject roundSystem = null;
+
     public List<NetworkRoomPlayerAvalon> RoomPlayers { get; } = new List<NetworkRoomPlayerAvalon>();
+    public List<NetworkGamePlayerAvalon> GamePlayers { get; } = new List<NetworkGamePlayerAvalon>();
+
 
     public override void OnStartServer() => spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
     
@@ -46,7 +53,7 @@ public class NetworkManagerAvalon : NetworkManager
             conn.Disconnect();
             return;
         }
-        if (SceneManager.GetSceneByName("Lobby").buildIndex != 2)
+        if (SceneManager.GetActiveScene().name != "Lobby")
         {
             conn.Disconnect();
             return;
@@ -69,7 +76,7 @@ public class NetworkManagerAvalon : NetworkManager
 
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
-        if (SceneManager.GetSceneByName("Lobby").buildIndex == 2)
+        if (SceneManager.GetActiveScene().name == "Lobby")
         {
             bool isLeader = RoomPlayers.Count == 0;
 
@@ -104,5 +111,34 @@ public class NetworkManagerAvalon : NetworkManager
         {
             player.HandleReadyToStart(IsReadyToStart());
         }
+    }
+
+    public void StartGame()
+    {
+        if(SceneManager.GetActiveScene().name == "Lobby")
+        {
+            if (!IsReadyToStart()) { return ; }
+
+            ServerChangeScene("Game");
+
+        }
+    }
+
+    public override void ServerChangeScene(string newSceneName)
+    {
+        // From menu to game
+        if (SceneManager.GetActiveScene().name == "Lobby" && newSceneName.StartsWith("Game"))
+        {
+            for (int i = RoomPlayers.Count - 1; i >= 0; i--)
+            {
+                var conn = RoomPlayers[i].connectionToClient;
+                var gameplayerInstance = Instantiate(gamePlayerPrefab);
+                gameplayerInstance.SetDisplayName(RoomPlayers[i].DisplayName);
+
+                NetworkServer.ReplacePlayerForConnection(conn, gameplayerInstance.gameObject, true); 
+            }
+        }
+
+        base.ServerChangeScene(newSceneName);
     }
 }

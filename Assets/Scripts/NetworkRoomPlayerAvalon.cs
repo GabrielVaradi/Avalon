@@ -67,7 +67,6 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
         room.StopHost();
         Destroy(room);
         
-
     }
 
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
@@ -131,6 +130,6 @@ public class NetworkRoomPlayerAvalon : NetworkBehaviour
     {
         if (Room.RoomPlayers[0].connectionToClient != connectionToClient) { return; }
 
-        // Room.StartGame();
+        Room.StartGame();
     }
 }
