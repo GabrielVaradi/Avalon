@@ -713,10 +713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c1bd4152c462249b5f00319628c8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkManager: {fileID: 0}
-  landingPagePanel: {fileID: 808063722}
-  ipAddressInputField: {fileID: 559531698}
-  joinButton: {fileID: 1069757813}
 --- !u!4 &170408932
 Transform:
   m_ObjectHideFlags: 0

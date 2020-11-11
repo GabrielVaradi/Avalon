@@ -8,19 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: cfad1e5033f6c1d47a656d8776f60162
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lobby.unity
     guid: 6f57222c0c054a34d97d79c559e97f2a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/RoomTest/Offline.unity
-    guid: bf1fe4df7b6661d449cbdfb7c92da238
-  - enabled: 1
-    path: Assets/RoomTest/Online.unity
-    guid: 9ee90f4ca91186d42a291985c2680519
-  - enabled: 1
-    path: Assets/RoomTest/Gameplay.unity
-    guid: 0032c74a3dfd61441b22313f4f52f646
   m_configObjects: {}

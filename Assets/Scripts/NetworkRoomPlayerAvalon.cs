@@ -28,17 +28,8 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public string DisplayName = "Loading...";
     [SyncVar(hook = nameof(HandleReadyStatusChanged))]
     public bool IsReady = false;
-
-    private bool isLeader;
-    public bool IsLeader
-    {
-        set
-        {
-            isLeader = value;
-            startGameButton.gameObject.SetActive(value);
-        }
-    }
-
+    public int clientIndex = 0;
+    
     private NetworkRoomManagerAvalon room;
     private NetworkRoomManagerAvalon Room
     {
@@ -104,17 +95,23 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
     public void HandleReadyToStart()
     {
-        // if (!isLeader) { return; }
         
         startGameButton.interactable = true;
     }
 
     public void HandleNotReadyToStart()
     {
-        // if (!isLeader) { return; }
         
         startGameButton.interactable = false;
     }
+
+    public void HandleHost()
+    {
+
+        startGameButton.gameObject.SetActive(true);
+
+    }
+
 
     [Command]
     private void CmdSetDisplayName(string displayName)
@@ -194,7 +191,14 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// This is a hook that is invoked on all player objects when entering the room.
     /// <para>Note: isLocalPlayer is not guaranteed to be set until OnStartLocalPlayer is called.</para>
     /// </summary>
-    public override void OnClientEnterRoom() { }
+    public override void OnClientEnterRoom()
+    { 
+        clientIndex++;
+        if (clientIndex == 1)
+        {
+            HandleHost();
+        }
+    }
 
     /// <summary>
     /// This is a hook that is invoked on all player objects when exiting the room.

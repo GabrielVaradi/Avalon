@@ -52,6 +52,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// This is called on the host when a host is started.
     /// </summary>
     public override void OnRoomStartHost() { }
+    
 
     /// <summary>
     /// This is called on the host when the host is stopped.
@@ -108,6 +109,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     public override void OnRoomServerAddPlayer(NetworkConnection conn)
     {
         base.OnRoomServerAddPlayer(conn);
+        
     }
 
     /// <summary>
@@ -130,7 +132,6 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     public override void OnRoomServerPlayersReady()
     {
         
-        Debug.Log("onroomserverplauerready");
         FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
         // base.OnRoomServerPlayersReady();
 

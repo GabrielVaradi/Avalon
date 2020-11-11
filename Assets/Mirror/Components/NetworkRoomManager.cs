@@ -314,7 +314,7 @@ namespace Mirror
         {
             // increment the index before adding the player, so first player starts at 1
             clientIndex++;
-
+            
             if (IsSceneActive(RoomScene))
             {
                 if (roomSlots.Count == maxConnections)
