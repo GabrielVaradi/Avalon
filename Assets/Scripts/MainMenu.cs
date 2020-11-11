@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     // private GameObject clonePlayer;
     private GameObject currentFrame;
     private GameObject nextFrame;
-    [SerializeField] private NetworkManagerAvalon networkManager = null;
+    [SerializeField] private NetworkRoomManagerAvalon networkManager = null;
     [Header("UI")]
     [SerializeField] private GameObject landingPagePanel = null;
 

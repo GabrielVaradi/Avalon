@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c1bd4152c462249b5f00319628c8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkManager: {fileID: 1729994140}
+  networkManager: {fileID: 0}
   landingPagePanel: {fileID: 808063722}
   ipAddressInputField: {fileID: 559531698}
   joinButton: {fileID: 1069757813}
@@ -5506,12 +5506,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1729994138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b5f034f19e2ff44b5ac65ec076df0e, type: 3}
+  m_Script: {fileID: 11500000, guid: ee13687bd30d5a04e9d661566f3572f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   runInBackground: 1
-  autoStartServerBuild: 0
+  autoStartServerBuild: 1
   showDebugMessages: 0
   serverTickRate: 30
   offlineScene: Assets/Scenes/Menu.unity
@@ -5522,13 +5522,18 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 7542945787535410261, guid: 468b9b0251908e94dbb4d3bfe6361b96, type: 3}
+  playerPrefab: {fileID: 3303734564283287558, guid: ea2f9d560f419a645bf97f2af7108420, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
+  showRoomGUI: 1
   minPlayers: 1
-  roomPlayerPrefab: {fileID: -5143058743304284609, guid: 93c8dfeb73a2ecb418527fcf40aecc42, type: 3}
-  gamePlayerPrefab: {fileID: 7669565038171036053, guid: ea2f9d560f419a645bf97f2af7108420, type: 3}
+  roomPlayerPrefab: {fileID: 5439298430994313178, guid: 93c8dfeb73a2ecb418527fcf40aecc42, type: 3}
+  RoomScene: Assets/Scenes/Lobby.unity
+  GameplayScene: Assets/Scenes/Game.unity
+  _allPlayersReady: 0
+  roomSlots: []
+  clientIndex: 0
 --- !u!4 &1729994142
 Transform:
   m_ObjectHideFlags: 0
