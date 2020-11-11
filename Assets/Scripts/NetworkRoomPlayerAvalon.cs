@@ -42,6 +42,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
     [Command]
     public void CmdOnReadyClick()
+    
     {
         if (readyText.activeSelf == true)
         {
