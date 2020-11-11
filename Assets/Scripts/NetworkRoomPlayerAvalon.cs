@@ -104,9 +104,16 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
     public void HandleReadyToStart()
     {
-        if (!isLeader) { return; }
+        // if (!isLeader) { return; }
+        
+        startGameButton.interactable = true;
+    }
 
-        startGameButton.interactable = !startGameButton.interactable;
+    public void HandleNotReadyToStart()
+    {
+        // if (!isLeader) { return; }
+        
+        startGameButton.interactable = false;
     }
 
     [Command]
@@ -114,14 +121,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     {
         DisplayName = displayName;
     }
-
-    // [Command]
-    // public void CmdReadyUp()
-    // {
-    //     IsReady = !IsReady;
-
-    //     Room.NotifyPlayersOfReadyState();
-    // }
 
     [Command]
     public void CmdStartGame()

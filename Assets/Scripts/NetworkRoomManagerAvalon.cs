@@ -129,18 +129,23 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// </summary>
     public override void OnRoomServerPlayersReady()
     {
-        foreach (var player in RoomPlayers)
-        {
-            player.HandleReadyToStart();
-        }
+        
+        Debug.Log("onroomserverplauerready");
+        FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
         // base.OnRoomServerPlayersReady();
+
     }
 
     /// <summary>
     /// This is called on the server when CheckReadyToBegin finds that players are not ready
     /// <para>May be called multiple times while not ready players are joining</para>
     /// </summary>
-    public override void OnRoomServerPlayersNotReady() { }
+    public override void OnRoomServerPlayersNotReady() 
+    {
+
+    FindObjectOfType<NetworkRoomPlayerAvalon>().HandleNotReadyToStart();
+
+    }
 
     #endregion
 
