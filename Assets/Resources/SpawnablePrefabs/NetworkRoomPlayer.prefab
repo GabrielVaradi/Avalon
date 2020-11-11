@@ -2719,7 +2719,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5439298430994313178}
         m_TargetAssemblyTypeName: NetworkRoomPlayerAvalon, Assembly-CSharp
-        m_MethodName: CmdOnReadyClick
+        m_MethodName: OnReadyClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

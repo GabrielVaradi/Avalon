@@ -40,8 +40,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
         }
     }
 
-    [Command]
-    public void CmdOnReadyClick()
+    public void OnReadyClick()
     
     {
         if (readyText.activeSelf == true)
@@ -158,6 +157,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public override void OnStopClient() 
     {
         UpdateDisplay();
+        Destroy(room);
     }
 
     /// <summary>
