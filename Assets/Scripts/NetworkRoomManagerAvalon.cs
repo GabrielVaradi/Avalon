@@ -131,8 +131,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// </summary>
     public override void OnRoomServerPlayersReady()
     {
-        // Debug.Log("hi");
-        // FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
+        FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
         // base.OnRoomServerPlayersReady();
 
     }
@@ -144,7 +143,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     public override void OnRoomServerPlayersNotReady() 
     {
 
-    // FindObjectOfType<NetworkRoomPlayerAvalon>().HandleNotReadyToStart();
+    FindObjectOfType<NetworkRoomPlayerAvalon>().HandleNotReadyToStart();
 
     }
 

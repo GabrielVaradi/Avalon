@@ -43,6 +43,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public void OnReadyClick()
     
     {
+        IsReady = !IsReady;
         if (readyText.activeSelf == true)
         {
             CmdChangeReadyState(true);
@@ -58,6 +59,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
         }
     }
 
+
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
 
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
@@ -66,6 +68,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     {
         if (!hasAuthority)
         {
+            Debug.Log("HasAuthority");
             foreach (var player in Room.RoomPlayers)
             {
                 if (player.hasAuthority)
@@ -77,6 +80,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
             return;
         }
+
 
         for (int i = 0; i < playerNameTexts.Length; i++)
         {
@@ -147,6 +151,8 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// </summary>
     public override void OnStartClient() 
     { 
+        Room.RoomPlayers.Add(this);
+
         UpdateDisplay();
     }
 
@@ -156,6 +162,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// </summary>
     public override void OnStopClient() 
     {
+        Room.RoomPlayers.Remove(this);
         UpdateDisplay();
         Destroy(room);
     }
