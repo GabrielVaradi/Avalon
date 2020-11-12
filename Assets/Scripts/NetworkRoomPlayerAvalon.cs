@@ -28,7 +28,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public string DisplayName = "Loading...";
     [SyncVar(hook = nameof(HandleReadyStatusChanged))]
     public bool IsReady = false;
-    public int clientIndex = 0;
     
     private NetworkRoomManagerAvalon room;
     private NetworkRoomManagerAvalon Room
@@ -43,15 +42,16 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public void OnReadyClick()
     
     {
-        IsReady = !IsReady;
         if (readyText.activeSelf == true)
         {
+            IsReady = true;
             CmdChangeReadyState(true);
             cancelText.SetActive(true); 
             readyText.SetActive(false);
         }
         else
         {
+            IsReady = false;
             CmdChangeReadyState(false);
             readyText.SetActive(true); 
             cancelText.SetActive(false); 
@@ -68,7 +68,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     {
         if (!hasAuthority)
         {
-            Debug.Log("HasAuthority");
             foreach (var player in Room.RoomPlayers)
             {
                 if (player.hasAuthority)
@@ -201,8 +200,8 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// </summary>
     public override void OnClientEnterRoom()
     { 
-        clientIndex++;
-        if (clientIndex == 1)
+    
+        if (isServer == true)
         {
             HandleHost();
         }
@@ -229,7 +228,12 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// <para>This function is called when the a client player calls SendReadyToBeginMessage() or SendNotReadyToBeginMessage().</para>
     /// </summary>
     /// <param name="readyState">Whether the player is ready or not.</param>
-    public override void ReadyStateChanged(bool oldReadyState, bool readyState) { }
+    public override void ReadyStateChanged(bool oldReadyState, bool readyState)
+    {
+            IsReady = readyState;
+            UpdateDisplay();
+ 
+    }
 
     #endregion
 

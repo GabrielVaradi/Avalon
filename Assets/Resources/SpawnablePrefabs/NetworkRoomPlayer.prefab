@@ -118,7 +118,6 @@ MonoBehaviour:
   cancelText: {fileID: 3467977858436137375}
   DisplayName: Loading...
   IsReady: 0
-  clientIndex: 0
 --- !u!1 &2332235664859423595
 GameObject:
   m_ObjectHideFlags: 0

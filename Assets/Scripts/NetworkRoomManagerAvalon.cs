@@ -36,6 +36,14 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         }
     }
 
+    // public void NotifyPlayersOfReadyState()
+    // {
+    //     foreach (var player in RoomPlayers)
+    //     {
+    //         player.HandleReadyToStart(IsReadyToStart());
+    //     }
+    // }
+
     #region Server Callbacks
 
     /// <summary>
@@ -129,9 +137,17 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// This is called on the server when all the players in the room are ready.
     /// <para>The default implementation of this function uses ServerChangeScene() to switch to the game player scene. By implementing this callback you can customize what happens when all the players in the room are ready, such as adding a countdown or a confirmation for a group leader.</para>
     /// </summary>
+
+    bool showStartButton;
+
     public override void OnRoomServerPlayersReady()
     {
-        FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
+        showStartButton = true; 
+        if(showStartButton == true)
+        {
+
+        // FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
+        }
         // base.OnRoomServerPlayersReady();
 
     }
@@ -143,7 +159,15 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     public override void OnRoomServerPlayersNotReady() 
     {
 
-    FindObjectOfType<NetworkRoomPlayerAvalon>().HandleNotReadyToStart();
+        showStartButton = false;
+
+        if(showStartButton == false)
+        {
+
+            // FindObjectOfType<NetworkRoomPlayerAvalon>().HandleNotReadyToStart();
+
+        }
+
 
     }
 
