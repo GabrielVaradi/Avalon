@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  showRoomGUI: 1
+  showRoomGUI: 0
   readyToBegin: 0
   index: 0
   lobbyUI: {fileID: 7618554243872793287}
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5439298430994313178}
         m_TargetAssemblyTypeName: NetworkRoomPlayerAvalon, Assembly-CSharp
         m_MethodName: LeaveLobby
         m_Mode: 1

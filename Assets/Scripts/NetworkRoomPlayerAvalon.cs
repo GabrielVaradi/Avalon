@@ -98,21 +98,23 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
     public void HandleReadyToStart()
     {
-        
         startGameButton.interactable = true;
     }
 
     public void HandleNotReadyToStart()
     {
-        
         startGameButton.interactable = false;
     }
 
     public void HandleHost()
     {
-
         startGameButton.gameObject.SetActive(true);
+    }
 
+    public void LeaveLobby()
+    {
+        room.StopHost();
+        Destroy(room); 
     }
 
 
@@ -127,6 +129,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     {
 
         Room.StartGame();
+        lobbyUI.SetActive(false);
     }
 
     #region Start & Stop Callbacks

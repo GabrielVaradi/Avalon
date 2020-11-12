@@ -144,11 +144,13 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     {
         showStartButton = true; 
         if(showStartButton == true)
-        {
 
-        // FindObjectOfType<NetworkRoomPlayerAvalon>().HandleReadyToStart();
+        {
+           foreach (var player in RoomPlayers)
+            {
+                player.HandleReadyToStart();
+            }
         }
-        // base.OnRoomServerPlayersReady();
 
     }
 
@@ -164,10 +166,12 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         if(showStartButton == false)
         {
 
-            // FindObjectOfType<NetworkRoomPlayerAvalon>().HandleNotReadyToStart();
+            foreach (var player in RoomPlayers)
+            {
+                player.HandleNotReadyToStart();
+            }
 
         }
-
 
     }
 
