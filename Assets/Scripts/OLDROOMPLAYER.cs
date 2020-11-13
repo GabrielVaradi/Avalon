@@ -69,40 +69,6 @@
         
 //     }
 
-//     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
-
-//     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
-
-//     private void UpdateDisplay()
-//     {
-//         if (!hasAuthority)
-//         {
-//             foreach (var player in Room.RoomPlayers)
-//             {
-//                 if (player.hasAuthority)
-//                 {
-//                     player.UpdateDisplay();
-//                     break;
-//                 }
-//             }
-
-//             return;
-//         }
-
-//         for (int i = 0; i < playerNameTexts.Length; i++)
-//         {
-//             playerNameTexts[i].text = "Waiting...";
-//             playerReadyTexts[i].text = string.Empty;
-//         }
-
-//         for (int i = 0; i < Room.RoomPlayers.Count; i++)
-//         {
-//             playerNameTexts[i].text = Room.RoomPlayers[i].DisplayName;
-//             playerReadyTexts[i].text = Room.RoomPlayers[i].IsReady ?
-//                 "<color=green>Ready</color>" :
-//                 "<color=red>Not Ready</color>";
-//         }
-//     }
 
 //     public void HandleReadyToStart(bool readyToStart)
 //     {
