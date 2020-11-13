@@ -36,14 +36,6 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         }
     }
 
-    // public void NotifyPlayersOfReadyState()
-    // {
-    //     foreach (var player in RoomPlayers)
-    //     {
-    //         player.HandleReadyToStart(IsReadyToStart());
-    //     }
-    // }
-
     #region Server Callbacks
 
     /// <summary>
