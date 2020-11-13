@@ -38,12 +38,6 @@
 //         }
 //     }
 
-//     public override void OnStartAuthority()
-//     {
-//         CmdSetDisplayName(PlayerNameInput.DisplayName);
-
-//         lobbyUI.SetActive(true);
-//     }
 
 //     public override void OnStartClient()
 //     {
