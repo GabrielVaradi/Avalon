@@ -5523,17 +5523,16 @@ MonoBehaviour:
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 3303734564283287558, guid: ea2f9d560f419a645bf97f2af7108420, type: 3}
   autoCreatePlayer: 1
-  playerSpawnMethod: 0
+  playerSpawnMethod: 1
   spawnPrefabs: []
   showRoomGUI: 0
   minPlayers: 1
   roomPlayerPrefab: {fileID: 5439298430994313178, guid: 93c8dfeb73a2ecb418527fcf40aecc42, type: 3}
   RoomScene: Assets/Scenes/Lobby.unity
   GameplayScene: Assets/Scenes/Game.unity
-  _allPlayersReady: 0
+  _allPlayersReady: 1
   roomSlots: []
   clientIndex: 0
-  playerSpawnSystem: {fileID: 5949042736157186858, guid: f882a92d0657ab445ad78c79141586e3, type: 3}
 --- !u!4 &1729994142
 Transform:
   m_ObjectHideFlags: 0

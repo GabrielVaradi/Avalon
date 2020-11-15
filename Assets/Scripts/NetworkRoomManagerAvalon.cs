@@ -23,7 +23,7 @@ using System.Linq;
 /// </summary>
 public class NetworkRoomManagerAvalon : NetworkRoomManager
 {
-    [SerializeField] private GameObject playerSpawnSystem = null;
+    // [SerializeField] private GameObject playerSpawnSystem = null;
 
     public List<NetworkRoomPlayerAvalon> RoomPlayers { get; } = new List<NetworkRoomPlayerAvalon>();
     public List<NetworkGamePlayerAvalon> GamePlayers { get; } = new List<NetworkGamePlayerAvalon>();
@@ -88,11 +88,11 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// <param name="sceneName">Name of the new scene.</param>
     public override void OnRoomServerSceneChanged(string sceneName) 
     {
-        if (sceneName.StartsWith("Game"))
-        {
-            GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
-            NetworkServer.Spawn(playerSpawnSystemInstance);
-        }
+        // if (sceneName.StartsWith("Game"))
+        // {
+        //     GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
+        //     NetworkServer.Spawn(playerSpawnSystemInstance);
+        // }
 
     }
 

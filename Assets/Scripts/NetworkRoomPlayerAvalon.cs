@@ -130,6 +130,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
         Room.StartGame();
         lobbyUI.SetActive(false);
+        
     }
 
     #region Start & Stop Callbacks
@@ -213,7 +214,10 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// <summary>
     /// This is a hook that is invoked on all player objects when exiting the room.
     /// </summary>
-    public override void OnClientExitRoom() { }
+    public override void OnClientExitRoom()
+    {
+        lobbyUI.SetActive(false);
+    }
 
     #endregion
 
