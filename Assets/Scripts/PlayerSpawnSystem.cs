@@ -21,11 +21,11 @@ public class PlayerSpawnSystem : NetworkBehaviour
 
     public override void OnStartServer() => NetworkRoomManagerAvalon.OnServerReadied += SpawnPlayer;
 
-    public override void OnStartClient()
-    {
-        InputManager.Add(ActionMapNames.Player);
-        InputManager.Controls.Player.Look.Enable();
-    }
+    // public override void OnStartClient()
+    // {
+    //     InputManager.Add(ActionMapNames.Player);
+    //     InputManager.Controls.Player.Look.Enable();
+    // }
 
     [ServerCallback]
     private void OnDestroy() => NetworkRoomManagerAvalon.OnServerReadied -= SpawnPlayer;

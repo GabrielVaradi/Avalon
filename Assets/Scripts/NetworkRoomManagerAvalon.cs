@@ -23,6 +23,8 @@ using System.Linq;
 /// </summary>
 public class NetworkRoomManagerAvalon : NetworkRoomManager
 {
+    [SerializeField] private GameObject playerSpawnSystem = null;
+
     public List<NetworkRoomPlayerAvalon> RoomPlayers { get; } = new List<NetworkRoomPlayerAvalon>();
     public List<NetworkGamePlayerAvalon> GamePlayers { get; } = new List<NetworkGamePlayerAvalon>();
     public static event Action<NetworkConnection> OnServerReadied;
@@ -84,7 +86,15 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// This is called on the server when a networked scene finishes loading.
     /// </summary>
     /// <param name="sceneName">Name of the new scene.</param>
-    public override void OnRoomServerSceneChanged(string sceneName) { }
+    public override void OnRoomServerSceneChanged(string sceneName) 
+    {
+        if (sceneName.StartsWith("Game"))
+        {
+            GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
+            NetworkServer.Spawn(playerSpawnSystemInstance);
+        }
+
+    }
 
     /// <summary>
     /// This allows customization of the creation of the room-player object on the server.
