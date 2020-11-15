@@ -25,6 +25,8 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
 {
     public List<NetworkRoomPlayerAvalon> RoomPlayers { get; } = new List<NetworkRoomPlayerAvalon>();
     public List<NetworkGamePlayerAvalon> GamePlayers { get; } = new List<NetworkGamePlayerAvalon>();
+    public static event Action<NetworkConnection> OnServerReadied;
+
 
     public void StartGame()
     {
@@ -34,6 +36,13 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
             ServerChangeScene("Game");
 
         }
+    }
+    
+    public override void OnServerReady(NetworkConnection conn)
+    {
+        base.OnServerReady(conn);
+
+        OnServerReadied?.Invoke(conn);
     }
 
     #region Server Callbacks
