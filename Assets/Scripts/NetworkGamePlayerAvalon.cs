@@ -20,8 +20,8 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
         GameManager gameManager = GameManager.GetComponent<GameManager>();
         index = UnityEngine.Random.Range(0,gameManager.characterList.Count-1);
         Instantiate(gameManager.characterList[index], transform);
+        Debug.Log(gameManager.characterList[index].name);
         gameManager.characterList.RemoveAt(index);
-        Debug.Log(gameManager.characterList);
 
      }
 
