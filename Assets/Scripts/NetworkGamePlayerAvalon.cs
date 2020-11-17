@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
  
 
-
 public class NetworkGamePlayerAvalon : NetworkBehaviour
 {
 
