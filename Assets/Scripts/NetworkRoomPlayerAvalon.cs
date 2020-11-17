@@ -59,7 +59,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
         }
     }
 
-
     public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
 
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
@@ -79,7 +78,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
             return;
         }
-
 
         for (int i = 0; i < playerNameTexts.Length; i++)
         {
