@@ -3,32 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // public GameObject player;
-    // private GameObject clonePlayer;
+
     private GameObject currentFrame;
     private GameObject nextFrame;
     [SerializeField] private NetworkRoomManagerAvalon networkManager = null;
     [Header("UI")]
     [SerializeField] private GameObject landingPagePanel = null;
-
-    // void OnEnable()
-    // {
-    //     SceneManager.sceneLoaded += OnLevelFinishedLoading;
-    // }
-
-    // void OnDisable()
-    // {
-    //     SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    // }
-
-    // void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    // {
-    //     if (scene.buildIndex == 1)
-    //     {
-    //          clonePlayer = Instantiate(player, new Vector3(0f, 12.5f, 0f), Quaternion.identity) as GameObject;
-    //     }
-    // }
-
 
     public void PlayGame() 
     {
@@ -38,9 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void Retry()
     {
-        // Destroy(clonePlayer);
-        // FindObjectOfType<LevelLoader>().LoadNextScene("Game");
-        // clonePlayer = Instantiate(player, new Vector3(0f, 12.5f, 0f), Quaternion.identity) as GameObject;
+
     }
 
     public void GoToMenu()
