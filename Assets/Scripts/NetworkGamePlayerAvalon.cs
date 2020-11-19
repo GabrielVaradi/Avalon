@@ -35,8 +35,6 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
         //         Instantiate(gameManager.hiddenPlayer, spawnPoint.transform.position, spawnPoint.transform.rotation);
         //     }
         // }
-        
-
      }
 
   
@@ -46,7 +44,9 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     [Server]
     public void SetDisplayName(string displayName)
     {
+
         this.displayName = displayName;
+        
     }
 
 
