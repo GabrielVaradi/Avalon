@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void Retry()
     {
-
+        
     }
 
     public void GoToMenu()

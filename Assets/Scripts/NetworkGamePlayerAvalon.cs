@@ -12,7 +12,6 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     private int index; 
     public Vector3 playerPosition; 
 
-
     void Start()
      {
 
