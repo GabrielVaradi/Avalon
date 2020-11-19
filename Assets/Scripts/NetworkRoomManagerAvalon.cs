@@ -88,11 +88,6 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// <param name="sceneName">Name of the new scene.</param>
     public override void OnRoomServerSceneChanged(string sceneName) 
     {
-        // if (sceneName.StartsWith("Game"))
-        // {
-        //     GameObject playerSpawnSystemInstance = Instantiate(playerSpawnSystem);
-        //     NetworkServer.Spawn(playerSpawnSystemInstance);
-        // }
 
     }
 
