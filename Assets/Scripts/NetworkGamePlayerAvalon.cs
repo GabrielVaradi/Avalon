@@ -15,15 +15,15 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     void Start()
      {
 
-        GameObject GameManager = GameObject.Find("GameManager");
+        // GameObject GameManager = GameObject.Find("GameManager");
 
-        GameManager gameManager = GameManager.GetComponent<GameManager>();
+        // GameManager gameManager = GameManager.GetComponent<GameManager>();
 
-        index = UnityEngine.Random.Range(0,gameManager.characterList.Count-1);
+        // index = UnityEngine.Random.Range(0,gameManager.characterList.Count-1);
 
-        Instantiate(gameManager.characterList[index], transform);
+        // Instantiate(gameManager.characterList[index], transform);
 
-        gameManager.characterList.RemoveAt(index);
+        // gameManager.characterList.RemoveAt(index);
 
         // playerPosition = GameObject.FindGameObjectWithTag("NetworkGamePlayer").transform.position;
 
