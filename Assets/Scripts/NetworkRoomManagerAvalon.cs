@@ -36,6 +36,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         {
 
             ServerChangeScene("Game");
+            
 
         }
     }
@@ -88,6 +89,11 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// <param name="sceneName">Name of the new scene.</param>
     public override void OnRoomServerSceneChanged(string sceneName) 
     {
+        if (sceneName == "Game")
+        {
+
+        FindObjectOfType<Board>().spawnBoard();
+        }
 
     }
 

@@ -14,8 +14,27 @@ public class Board : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (isServer == true)
-        {
+        // if (isServer == true)
+        // {
+
+        //     for (int i = 0; i < 6; i++) 
+        //     {
+        //         index = UnityEngine.Random.Range(0,characterList.Count-1);
+
+        //         test = Instantiate(characterList[index], spawnPoints[i].transform.position, spawnPoints[i].transform.rotation);
+
+        //         characterList.RemoveAt(index);
+
+        //         NetworkServer.Spawn(test);
+        //     }
+        // }
+
+    }
+
+    public void spawnBoard() 
+    {
+        // if (isServer == true)
+        // {
 
             for (int i = 0; i < 6; i++) 
             {
@@ -27,8 +46,7 @@ public class Board : MonoBehaviour
 
                 NetworkServer.Spawn(test);
             }
-        }
-
+        // }
     }
 
     // Update is called once per frame
