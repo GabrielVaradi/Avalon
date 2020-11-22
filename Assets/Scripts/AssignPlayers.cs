@@ -16,15 +16,10 @@ public class AssignPlayers : MonoBehaviour
         
     }
 
-    public void AssignRoles(List<NetworkGamePlayerAvalon> gamePlayers) 
+    public void AssignRoles(GameObject player) 
     {
-
-        foreach (var player in gamePlayers)
-        {
-
+        
             Debug.Log(player);
-
-        }
 
     }
 

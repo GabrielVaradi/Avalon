@@ -13,7 +13,10 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     public Vector3 playerPosition; 
 
     void Start()
+
      {
+        FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
+
 
         // GameObject GameManager = GameObject.Find("GameManager");
 
@@ -37,16 +40,16 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
      }
 
   
-    [SyncVar]
-    private string displayName = "Loading...";
+    // [SyncVar]
+    // private string displayName = "Loading...";
 
-    [Server]
-    public void SetDisplayName(string displayName)
-    {
+    // [Server]
+    // public void SetDisplayName(string displayName)
+    // {
 
-        this.displayName = displayName;
+    //     this.displayName = displayName;
         
-    }
+    // }
 
 
 }

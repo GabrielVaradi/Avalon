@@ -63,10 +63,4 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   playerPosition: {x: 0, y: 0, z: 0}
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  gamePlayer: {fileID: 0}

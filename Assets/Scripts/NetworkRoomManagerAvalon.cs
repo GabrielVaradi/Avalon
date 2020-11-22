@@ -92,10 +92,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         if (sceneName == "Game")
         {
 
-        FindObjectOfType<Board>().spawnBoard();
-        // FindObjectOfType<AssignPlayers>().AssignRoles(GamePlayers);
-        Debug.Log(GamePlayers);
-
+            FindObjectOfType<Board>().spawnBoard();
 
         }
 
