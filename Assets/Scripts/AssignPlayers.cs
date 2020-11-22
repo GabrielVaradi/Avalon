@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AssignPlayers : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void AssignRoles(List<NetworkGamePlayerAvalon> gamePlayers) 
+    {
+
+        foreach (var player in gamePlayers)
+        {
+
+            Debug.Log(player);
+
+        }
+
+    }
+
+}

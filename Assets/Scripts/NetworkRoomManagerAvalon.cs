@@ -93,6 +93,10 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         {
 
         FindObjectOfType<Board>().spawnBoard();
+        // FindObjectOfType<AssignPlayers>().AssignRoles(GamePlayers);
+        Debug.Log(GamePlayers);
+
+
         }
 
     }
