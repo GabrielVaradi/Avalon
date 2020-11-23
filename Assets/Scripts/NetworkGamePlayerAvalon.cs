@@ -10,12 +10,14 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 {
 
     private int index; 
-    public Vector3 playerPosition; 
+    public Vector3 playerPosition;
+    private GameObject character; 
 
     void Start()
 
      {
-        FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
+        character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
+        Debug.Log(character);
 
 
         // GameObject GameManager = GameObject.Find("GameManager");
