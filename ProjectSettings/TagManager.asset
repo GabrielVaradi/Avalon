@@ -8,6 +8,13 @@ TagManager:
   - GameManager
   - NetworkGamePlayer
   - SpawnPoint
+  - Obiwan
+  - Windu
+  - Quigon
+  - Yoda
+  - Vader
+  - Palpatine
+  - Unknown
   layers:
   - Default
   - TransparentFX

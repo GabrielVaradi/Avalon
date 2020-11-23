@@ -19,7 +19,7 @@ public class AssignPlayers : MonoBehaviour
     public void AssignRoles(GameObject player) 
     {
         
-            Debug.Log(player);
+           
 
     }
 
