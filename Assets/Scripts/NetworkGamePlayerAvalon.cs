@@ -32,7 +32,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
         {
             if (spawnPoint.transform.position != playerPosition)
             {
-                Instantiate(board.hiddenPlayer, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                Instantiate(board.hiddenPlayer, new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, -1), spawnPoint.transform.rotation);
             }
         }
 
