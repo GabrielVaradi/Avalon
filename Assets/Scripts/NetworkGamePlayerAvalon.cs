@@ -12,13 +12,29 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     private int index; 
     public Vector3 playerPosition;
     private GameObject character; 
+    
 
     void Start()
 
      {
-        character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
-        Debug.Log(character);
 
+        GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
+
+        GameObject Board = GameObject.FindWithTag("Board");
+
+        Board board = Board.GetComponent<Board>();
+
+        character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
+
+        playerPosition = character.transform.position;
+
+        foreach (Transform spawnPoint in SpawnPoints.transform)
+        {
+            if (spawnPoint.transform.position != playerPosition)
+            {
+                Instantiate(board.hiddenPlayer, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            }
+        }
 
         // GameObject GameManager = GameObject.Find("GameManager");
 
