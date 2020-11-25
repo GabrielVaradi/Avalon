@@ -10,7 +10,6 @@ TagManager:
   - SpawnPoint
   - Obiwan
   - Windu
-  - Quigon
   - Yoda
   - Vader
   - Palpatine
@@ -18,6 +17,7 @@ TagManager:
   - SpawnPoints
   - Board
   - HidePlayers
+  - QuiGon
   layers:
   - Default
   - TransparentFX

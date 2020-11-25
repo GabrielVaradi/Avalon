@@ -6,8 +6,8 @@ public class AssignPlayers : MonoBehaviour
 {
 
     private GameObject character;
-    private List<string> characters = new List<string>() { "Obiwan", "Yoda", "Windu", "Quigon", "Palpatine", "Vader" };
-    // private List<string> characters = new List<string>() { "Obiwan", "Yoda" };
+    // private List<string> characters = new List<string>() { "Obiwan", "Yoda", "Windu", "Quigon", "Palpatine", "Vader" };
+    private List<string> characters = new List<string>() { "Obiwan", "Obiwan" };
     private string randomCharacter;
     private int index;
 
