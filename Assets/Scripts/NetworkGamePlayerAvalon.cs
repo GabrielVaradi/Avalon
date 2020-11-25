@@ -28,14 +28,9 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
         playerPosition = character.transform.position;
 
-        foreach (Transform spawnPoint in SpawnPoints.transform)
-        {
-            if (spawnPoint.transform.position != playerPosition)
-            {
-                Instantiate(board.hiddenPlayer, new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, -1), spawnPoint.transform.rotation);
-            }
-        }
-        
+        FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
+
+
      }
 
   
