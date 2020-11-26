@@ -204,6 +204,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     { 
     
         if (isServer == true)
+        
         {
             HandleHost();
         }
