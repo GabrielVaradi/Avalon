@@ -335,6 +335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hiddenPlayer: {fileID: 2839253249904237907, guid: 1dadcab1587ed6849bd0add95d5f79ac, type: 3}
+  yodaOrVader: {fileID: 3594569138636503840, guid: f8a2fac0c1ba1bc45b65aa8c3043e58d, type: 3}
+  evilAlly: {fileID: 8802532569020594781, guid: 790c94abe9b58354ea3f0817f77c5d9e, type: 3}
 --- !u!1 &1180645285
 GameObject:
   m_ObjectHideFlags: 0

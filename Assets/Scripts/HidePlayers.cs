@@ -5,7 +5,9 @@ using UnityEngine;
 public class HidePlayers : MonoBehaviour
 {
 
-    public GameObject hiddenPlayer; 
+    public GameObject hiddenPlayer;
+    public GameObject yodaOrVader;
+    public GameObject evilAlly;
     private GameObject Obiwan;
     private GameObject QuiGon;
     private GameObject Yoda;
@@ -44,14 +46,25 @@ public class HidePlayers : MonoBehaviour
             }
         }
 
-        if (character.name == "PalpatineGO(Clone)" || character.name == "VaderGO(Clone)")
+        if (character.name == "PalpatineGO(Clone)")
         {
 
             Instantiate(hiddenPlayer, new Vector3(Yoda.transform.position.x, Yoda.transform.position.y, -1), Yoda.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(Obiwan.transform.position.x, Obiwan.transform.position.y, -1), Obiwan.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(Windu.transform.position.x, Windu.transform.position.y, -1), Windu.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(QuiGon.transform.position.x, QuiGon.transform.position.y, -1), QuiGon.transform.rotation);
-            // INSTANTIATE EVIL FACE Instantiate(hiddenPlayer, new Vector3(QuiGon.transform.position.x, QuiGon.transform.position.y, -1), QuiGon.transform.rotation);
+            Instantiate(evilAlly, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
+
+        }
+
+        if (character.name == "VaderGO(Clone)")
+        {
+
+            Instantiate(hiddenPlayer, new Vector3(Yoda.transform.position.x, Yoda.transform.position.y, -1), Yoda.transform.rotation);
+            Instantiate(hiddenPlayer, new Vector3(Obiwan.transform.position.x, Obiwan.transform.position.y, -1), Obiwan.transform.rotation);
+            Instantiate(hiddenPlayer, new Vector3(Windu.transform.position.x, Windu.transform.position.y, -1), Windu.transform.rotation);
+            Instantiate(hiddenPlayer, new Vector3(QuiGon.transform.position.x, QuiGon.transform.position.y, -1), QuiGon.transform.rotation);
+            Instantiate(evilAlly, new Vector3(Palpatine.transform.position.x, Palpatine.transform.position.y, -1), Palpatine.transform.rotation);
 
         }
 
@@ -62,7 +75,7 @@ public class HidePlayers : MonoBehaviour
             Instantiate(hiddenPlayer, new Vector3(Obiwan.transform.position.x, Obiwan.transform.position.y, -1), Obiwan.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(Windu.transform.position.x, Windu.transform.position.y, -1), Windu.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(QuiGon.transform.position.x, QuiGon.transform.position.y, -1), QuiGon.transform.rotation);
-            // INSTANTIATE EVIL FACE Instantiate(hiddenPlayer, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
+            Instantiate(hiddenPlayer, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
 
         }
 
@@ -72,8 +85,8 @@ public class HidePlayers : MonoBehaviour
             Instantiate(hiddenPlayer, new Vector3(Palpatine.transform.position.x, Palpatine.transform.position.y, -1), Palpatine.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(Windu.transform.position.x, Windu.transform.position.y, -1), Windu.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(QuiGon.transform.position.x, QuiGon.transform.position.y, -1), QuiGon.transform.rotation);
-            // INSTANTIATE GOOD OR BAD Instantiate(hiddenPlayer, new Vector3(Yoda.transform.position.x, Yoda.transform.position.y, -1), Yoda.transform.rotation);
-            // INSTANTIATE GOOD OR BAD Instantiate(hiddenPlayer, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
+            Instantiate(yodaOrVader, new Vector3(Yoda.transform.position.x, Yoda.transform.position.y, -1), Yoda.transform.rotation);
+            Instantiate(yodaOrVader, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
 
         }
     }
