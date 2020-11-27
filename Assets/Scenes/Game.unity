@@ -209,6 +209,7 @@ MonoBehaviour:
   - {fileID: 1180645285}
   - {fileID: 1417323692}
   - {fileID: 1667312207}
+  Senate: {fileID: 4698121445211096329, guid: d42e6f969e7f5154bb74c597013b2d0f, type: 3}
 --- !u!4 &715074633
 Transform:
   m_ObjectHideFlags: 0

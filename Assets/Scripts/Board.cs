@@ -5,10 +5,12 @@ using Mirror;
 
 public class Board : MonoBehaviour
 {
-    private int index; 
+    private int index;
     public List<GameObject> characterList = new List<GameObject>();
     public List<GameObject> spawnPoints = new List<GameObject>();
-    private GameObject character; 
+    private GameObject character;
+    private GameObject leader; 
+    public GameObject Senate; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,12 @@ public class Board : MonoBehaviour
             characterList.RemoveAt(index);
 
             NetworkServer.Spawn(character);
+           
         }
+            leader = Instantiate(leader, spawnPoints[0].transform.position, spawnPoints[0].transform.rotation);
+            // NetworkServer.Spawn(leader);
+
+
     }
 
     // Update is called once per frame
