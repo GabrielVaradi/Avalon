@@ -31,8 +31,8 @@ public class Board : MonoBehaviour
             NetworkServer.Spawn(character);
            
         }
-            leader = Instantiate(leader, spawnPoints[0].transform.position, spawnPoints[0].transform.rotation);
-            // NetworkServer.Spawn(leader);
+            leader = Instantiate(Senate, new Vector3(spawnPoints[0].transform.position.x, spawnPoints[0].transform.position.y + 1, spawnPoints[0].transform.position.z), spawnPoints[0].transform.rotation);
+            NetworkServer.Spawn(leader);
 
 
     }

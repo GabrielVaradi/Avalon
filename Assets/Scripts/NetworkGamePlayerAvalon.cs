@@ -24,11 +24,18 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
         Board board = Board.GetComponent<Board>();
 
+        if (isLocalPlayer)
+
+        {
         character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
 
         playerPosition = character.transform.position;
 
         FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
+        
+        }
+
+
 
 
      }

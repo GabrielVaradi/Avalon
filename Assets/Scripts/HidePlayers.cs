@@ -75,7 +75,7 @@ public class HidePlayers : MonoBehaviour
             Instantiate(hiddenPlayer, new Vector3(Obiwan.transform.position.x, Obiwan.transform.position.y, -1), Obiwan.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(Windu.transform.position.x, Windu.transform.position.y, -1), Windu.transform.rotation);
             Instantiate(hiddenPlayer, new Vector3(QuiGon.transform.position.x, QuiGon.transform.position.y, -1), QuiGon.transform.rotation);
-            Instantiate(hiddenPlayer, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
+            Instantiate(evilAlly, new Vector3(Vader.transform.position.x, Vader.transform.position.y, -1), Vader.transform.rotation);
 
         }
 
