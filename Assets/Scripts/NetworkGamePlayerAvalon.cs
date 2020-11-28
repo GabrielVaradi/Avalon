@@ -11,7 +11,9 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
     private int index; 
     public Vector3 playerPosition;
-    private GameObject character; 
+    private Vector3 senatePosition;
+    private GameObject character;
+    [SerializeField] private Button sendOnMission = null;
     
 
     void Start()
@@ -19,6 +21,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
      {
 
         GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
+        senatePosition = FindObjectOfType<Board>().senate.transform.position;
 
         if (isLocalPlayer)
 
@@ -30,8 +33,25 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
             FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
 
+
+            Debug.Log(playerPosition);
+            Debug.Log(senatePosition);
+
+            // playerPosition = senatePosition;
+
+            // if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y/* + 1*/)
+            // {
+              showSenateOptions();
+            // }
+
+
         }
 
+     }
+
+     public void showSenateOptions()
+     {
+        Debug.Log("test");
      }
 
   

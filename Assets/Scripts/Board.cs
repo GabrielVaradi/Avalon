@@ -9,7 +9,7 @@ public class Board : MonoBehaviour
     public List<GameObject> characterList = new List<GameObject>();
     public List<GameObject> spawnPoints = new List<GameObject>();
     private GameObject character;
-    private GameObject senate; 
+    public GameObject senate; 
     public GameObject Senate; 
 
     // Start is called before the first frame update
@@ -31,9 +31,8 @@ public class Board : MonoBehaviour
             NetworkServer.Spawn(character);
            
         }
-            senate = Instantiate(Senate, new Vector3(spawnPoints[0].transform.position.x, spawnPoints[0].transform.position.y + 1, spawnPoints[0].transform.position.z), spawnPoints[0].transform.rotation);
+            senate = Instantiate(Senate, new Vector3(spawnPoints[UnityEngine.Random.Range(0,5)].transform.position.x, spawnPoints[UnityEngine.Random.Range(0,5)].transform.position.y + 1, spawnPoints[UnityEngine.Random.Range(0,5)].transform.position.z), spawnPoints[UnityEngine.Random.Range(0,5)].transform.rotation);
             NetworkServer.Spawn(senate);
-
 
     }
 
