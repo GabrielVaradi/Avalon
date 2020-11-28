@@ -20,23 +20,17 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
         GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
 
-        GameObject Board = GameObject.FindWithTag("Board");
-
-        Board board = Board.GetComponent<Board>();
-
         if (isLocalPlayer)
 
         {
-        character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
 
-        playerPosition = character.transform.position;
+            character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
 
-        FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
-        
+            playerPosition = character.transform.position;
+
+            FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
+
         }
-
-
-
 
      }
 
