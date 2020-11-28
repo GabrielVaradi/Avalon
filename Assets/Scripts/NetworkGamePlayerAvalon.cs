@@ -21,7 +21,8 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
      {
 
         GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
-        senatePosition = FindObjectOfType<Board>().senate.transform.position;
+        // Debug.Log(FindObjectOfType<Board>().senate);
+        // senatePosition = FindObjectOfType<Board>().senate.transform.position;
 
         if (isLocalPlayer)
 
@@ -34,8 +35,8 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
             FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
 
 
-            Debug.Log(playerPosition);
-            Debug.Log(senatePosition);
+            // Debug.Log(playerPosition);
+            // Debug.Log(senatePosition);
 
             // playerPosition = senatePosition;
 
