@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class Board : MonoBehaviour
+public class Board : NetworkBehaviour
 {
     private int index;
     public List<GameObject> characterList = new List<GameObject>();
     public List<GameObject> spawnPoints = new List<GameObject>();
     private GameObject character;
-    //Syncvar <=========
-    public GameObject senate; 
     public GameObject Senate; 
+    public GameObject senate = null; 
+
+    [SyncVar]
+    public Vector3 senatePosition;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class Board : MonoBehaviour
            
         }
             senate = Instantiate(Senate, new Vector3(spawnPoints[UnityEngine.Random.Range(0,5)].transform.position.x, spawnPoints[UnityEngine.Random.Range(0,5)].transform.position.y + 1, spawnPoints[UnityEngine.Random.Range(0,5)].transform.position.z), spawnPoints[UnityEngine.Random.Range(0,5)].transform.rotation);
+            senatePosition = senate.transform.position;
             NetworkServer.Spawn(senate);
 
     }

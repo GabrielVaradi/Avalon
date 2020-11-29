@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6674c3477b528924aa5a98d726f861be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!4 &457208922
 Transform:
   m_ObjectHideFlags: 0
@@ -193,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715074633}
   - component: {fileID: 715074632}
+  - component: {fileID: 715074634}
   m_Layer: 0
   m_Name: Board
   m_TagString: Board
@@ -212,6 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0535901a250338147b72a53926a153ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   characterList:
   - {fileID: 8228347444952114068, guid: 642a8b5eef8234b47b164f7a85e10b67, type: 3}
   - {fileID: 7981645515301145141, guid: 375c6457ed58a6d4ba3db24638d659f7, type: 3}
@@ -226,8 +231,8 @@ MonoBehaviour:
   - {fileID: 1180645285}
   - {fileID: 1417323692}
   - {fileID: 1667312207}
-  senate: {fileID: 0}
   Senate: {fileID: 4698121445211096329, guid: d42e6f969e7f5154bb74c597013b2d0f, type: 3}
+  senate: {fileID: 4077397039988558852, guid: 6abbaf80383e0c549a78c4f30b5804a1, type: 3}
 --- !u!4 &715074633
 Transform:
   m_ObjectHideFlags: 0
@@ -244,6 +249,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &715074634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715074631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 108052622
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &799465141
 GameObject:
   m_ObjectHideFlags: 0
