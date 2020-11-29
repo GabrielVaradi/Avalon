@@ -9,6 +9,7 @@ public class Board : MonoBehaviour
     public List<GameObject> characterList = new List<GameObject>();
     public List<GameObject> spawnPoints = new List<GameObject>();
     private GameObject character;
+    //Syncvar <=========
     public GameObject senate; 
     public GameObject Senate; 
 
