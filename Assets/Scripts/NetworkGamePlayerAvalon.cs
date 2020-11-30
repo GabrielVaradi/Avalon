@@ -20,6 +20,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     void Start()
 
      {
+       players = GameObject.FindGameObjectsWithTag("NetworkGamePlayer");
 
         GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
         senatePosition = FindObjectOfType<Board>().senatePosition;
@@ -56,12 +57,17 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
      }
 
-     public void showSenateOptions()
+     void Update()
      {
        players = GameObject.FindGameObjectsWithTag("NetworkGamePlayer");
-       Debug.Log(players.Length);
-      //  sendOnMission.gameObject.SetActive(true);
      }
+     
+     public void showSenateOptions()
+     {
+       Debug.Log(players.Length);
+       sendOnMission.gameObject.SetActive(true);
+     }
+
 
   
     // [SyncVar]
