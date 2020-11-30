@@ -33,16 +33,12 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
             FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
 
+            playerPosition = senatePosition;
 
-            Debug.Log("player " + playerPosition);
-            Debug.Log("senate " + senatePosition);
-
-            // playerPosition = senatePosition;
-
-            // if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y/* + 1*/)
-            // {
+            if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y/* + 1*/)
+            {
               showSenateOptions();
-            // }
+            }
 
 
         }
@@ -51,7 +47,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
      public void showSenateOptions()
      {
-        Debug.Log("test");
+       sendOnMission.gameObject.SetActive(true);
      }
 
   
