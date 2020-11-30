@@ -13,6 +13,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     public Vector3 playerPosition;
     private Vector3 senatePosition;
     private GameObject character;
+    private GameObject[] players;
     [SerializeField] private Button sendOnMission = null;
     
 
@@ -33,9 +34,19 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
             FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
 
-            playerPosition = senatePosition;
+            // playerPosition = senatePosition;
+            // Debug.Log(playerPosition.x);
+            // Debug.Log(senatePosition.x);
 
-            if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y/* + 1*/)
+            // Debug.Log(playerPosition.y);
+            // Debug.Log(senatePosition.y);
+
+            // Debug.Log(senatePosition.x == playerPosition.x);
+            // Debug.Log(senatePosition.y == playerPosition.y + 1);
+            // Debug.Log(senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y + 1);
+
+            // if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y + 1)
+            if (isServer)
             {
               showSenateOptions();
             }
@@ -47,7 +58,9 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
      public void showSenateOptions()
      {
-       sendOnMission.gameObject.SetActive(true);
+       players = GameObject.FindGameObjectsWithTag("NetworkGamePlayer");
+       Debug.Log(players.Length);
+      //  sendOnMission.gameObject.SetActive(true);
      }
 
   
