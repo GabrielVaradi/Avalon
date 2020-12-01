@@ -18,7 +18,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     
     void Start()
     {
-       Invoke("StartGame", 2);
+       Invoke("StartGame", 1);
     }
 
      void StartGame()
@@ -55,7 +55,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
           }
 
         }
-        
+
      }
 
      void Update()
