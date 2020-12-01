@@ -16,45 +16,46 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     private GameObject[] players;
     [SerializeField] private Button sendOnMission = null;
     
-
     void Start()
+    {
+       Invoke("StartGame", 2);
+    }
 
+     void StartGame()
      {
-       players = GameObject.FindGameObjectsWithTag("NetworkGamePlayer");
-
-        GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
+       GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
         senatePosition = FindObjectOfType<Board>().senatePosition;
 
         if (isLocalPlayer)
 
         {
 
-            character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
+          character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
 
-            playerPosition = character.transform.position;
+          playerPosition = character.transform.position;
 
-            FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
+          FindObjectOfType<HidePlayers>().HideRoles(playerPosition, SpawnPoints, character);
 
-            // playerPosition = senatePosition;
-            // Debug.Log(playerPosition.x);
-            // Debug.Log(senatePosition.x);
+          // playerPosition = senatePosition;
+          // Debug.Log(playerPosition.x);
+          // Debug.Log(senatePosition.x);
 
-            // Debug.Log(playerPosition.y);
-            // Debug.Log(senatePosition.y);
+          // Debug.Log(playerPosition.y);
+          // Debug.Log(senatePosition.y);
 
-            // Debug.Log(senatePosition.x == playerPosition.x);
-            // Debug.Log(senatePosition.y == playerPosition.y + 1);
-            // Debug.Log(senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y + 1);
+          // Debug.Log(senatePosition.x == playerPosition.x);
+          // Debug.Log(senatePosition.y == playerPosition.y + 1);
+          // Debug.Log(senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y + 1);
 
-            // if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y + 1)
-            if (isServer)
-            {
-              showSenateOptions();
-            }
+          // if (senatePosition.x == playerPosition.x && senatePosition.y == playerPosition.y + 1)
+          if (isServer)
+          {
+            showSenateOptions();
 
+          }
 
         }
-
+        
      }
 
      void Update()
