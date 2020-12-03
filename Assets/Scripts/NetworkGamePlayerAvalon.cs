@@ -51,7 +51,6 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
           if (isServer)
           {
             showSenateOptions();
-
           }
 
         }
@@ -66,7 +65,13 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
      public void showSenateOptions()
      {
        Debug.Log(players.Length);
-       sendOnMission.gameObject.SetActive(true);
+       foreach(GameObject player in players)
+       {
+
+        sendOnMission.gameObject.SetActive(true);
+
+       }
+       
      }
 
 
