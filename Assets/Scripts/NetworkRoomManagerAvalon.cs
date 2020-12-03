@@ -48,12 +48,6 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         OnServerReadied?.Invoke(conn);
     }
 
-    // public void LeaveLobby()
-    // {
-
-    //     onRoomStopClient or onRoomClientDisconnect
-        
-    // }
 
     #region Server Callbacks
 
