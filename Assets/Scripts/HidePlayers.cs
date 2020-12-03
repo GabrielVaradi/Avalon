@@ -15,16 +15,6 @@ public class HidePlayers : MonoBehaviour
     private GameObject Palpatine;
     private GameObject Vader;
 
-    // Start is called before the first frame update
-    void Start()
-    {        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void HideRoles(Vector3 playerPosition, GameObject SpawnPoints, GameObject character)
     {
         Obiwan = GameObject.FindWithTag("Obiwan");
