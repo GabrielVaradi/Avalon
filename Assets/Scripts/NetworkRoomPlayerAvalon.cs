@@ -182,7 +182,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public override void OnStartAuthority() 
     { 
         CmdSetDisplayName(PlayerNameInput.DisplayName);
-
         lobbyUI.SetActive(true);
     }
 
@@ -202,9 +201,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// </summary>
     public override void OnClientEnterRoom()
     { 
-    
-        if (isServer == true)
-        
+        if (isServer == true)      
         {
             HandleHost();
         }
@@ -236,9 +233,8 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     /// <param name="readyState">Whether the player is ready or not.</param>
     public override void ReadyStateChanged(bool oldReadyState, bool readyState)
     {
-            IsReady = readyState;
-            UpdateDisplay();
- 
+        IsReady = readyState;
+        UpdateDisplay();
     }
 
     #endregion
