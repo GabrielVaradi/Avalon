@@ -153,7 +153,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     public override void OnStartClient() 
     { 
         Room.RoomPlayers.Add(this);
-
         UpdateDisplay();
     }
 
