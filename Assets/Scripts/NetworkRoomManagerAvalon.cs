@@ -34,17 +34,13 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     {
         if(SceneManager.GetActiveScene().name == "Lobby")
         {
-
             ServerChangeScene("Game");
-            
-
         }
     }
     
     public override void OnServerReady(NetworkConnection conn)
     {
         base.OnServerReady(conn);
-
         OnServerReadied?.Invoke(conn);
     }
 
@@ -92,11 +88,8 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     {
         if (sceneName == "Game")
         {
-
             FindObjectOfType<Board>().spawnBoard();
-
         }
-
     }
 
     /// <summary>
