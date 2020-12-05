@@ -115,7 +115,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
         Destroy(room); 
     }
 
-
     [Command]
     private void CmdSetDisplayName(string displayName)
     {
@@ -125,10 +124,8 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
     [Command]
     public void CmdStartGame()
     {
-
         Room.StartGame();
         lobbyUI.SetActive(false);
-        
     }
 
     #region Start & Stop Callbacks
