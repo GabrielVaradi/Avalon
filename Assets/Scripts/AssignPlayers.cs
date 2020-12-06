@@ -13,19 +13,12 @@ public class AssignPlayers : NetworkBehaviour
     private int index;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void Start() {}
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() {}
 
     public GameObject AssignRoles(GameObject player) 
-    
     {
         index = UnityEngine.Random.Range(0,characters.Count-1);
         randomCharacter = characters[index];
@@ -33,7 +26,5 @@ public class AssignPlayers : NetworkBehaviour
         character = GameObject.FindWithTag(randomCharacter);
         characters.RemoveAt(index);
         return character;   
-
     }
-
 }
