@@ -17,10 +17,10 @@ public class Board : NetworkBehaviour
     public Vector3 senatePosition;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {}
 
-    }
+    // Update is called once per frame
+    void Update() {}
 
     public void spawnBoard() 
     {
@@ -39,12 +39,5 @@ public class Board : NetworkBehaviour
             senate = Instantiate(Senate, new Vector3(spawnPoints[randomIndex].transform.position.x, spawnPoints[randomIndex].transform.position.y + 1, spawnPoints[randomIndex].transform.position.z), spawnPoints[randomIndex].transform.rotation);
             senatePosition = senate.transform.position;
             NetworkServer.Spawn(senate);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
