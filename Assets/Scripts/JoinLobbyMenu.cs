@@ -11,14 +11,11 @@ public class JoinLobbyMenu : MonoBehaviour
     [SerializeField] private TMP_InputField ipAddressInputField = null;
     [SerializeField] private Button joinButton;
 
-    public void JoinLobby()
-    
+    public void JoinLobby()    
     {
         string ipAddress = ipAddressInputField.text;
 
         networkManager.networkAddress = ipAddress;
         networkManager.StartClient();
-
     }
-
 }
