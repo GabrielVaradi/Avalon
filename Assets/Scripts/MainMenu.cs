@@ -16,10 +16,7 @@ public class MainMenu : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadNextScene("Game");
     }
 
-    public void Retry()
-    {
-        
-    }
+    public void Retry() {}
 
     public void GoToMenu()
     {
