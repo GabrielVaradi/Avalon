@@ -64,13 +64,13 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
      
      public void showSenateOptions()
      {
-       Debug.Log(players.Length);
-       foreach(GameObject player in players)
-       {
+      Debug.Log(players.Length);
+      foreach(GameObject player in players)
+      {
 
-        sendOnMission.gameObject.SetActive(true);
+       sendOnMission.gameObject.SetActive(true);
 
-       }
+      }
        
      }
 
