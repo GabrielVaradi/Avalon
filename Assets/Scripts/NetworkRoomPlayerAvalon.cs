@@ -55,7 +55,6 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
             CmdChangeReadyState(false);
             readyText.SetActive(true); 
             cancelText.SetActive(false); 
-
         }
     }
 
