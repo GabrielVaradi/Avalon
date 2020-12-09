@@ -43,8 +43,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
         base.OnServerReady(conn);
         OnServerReadied?.Invoke(conn);
     }
-
-
+    
     #region Server Callbacks
 
     /// <summary>
