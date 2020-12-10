@@ -123,7 +123,6 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     public override void OnRoomServerAddPlayer(NetworkConnection conn)
     {
         base.OnRoomServerAddPlayer(conn);
-        
     }
 
     /// <summary>
@@ -166,7 +165,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     /// </summary>
     public override void OnRoomServerPlayersNotReady() 
     {
-
+        
         showStartButton = false;
 
         if(showStartButton == false)
