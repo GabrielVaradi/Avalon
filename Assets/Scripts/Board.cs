@@ -35,6 +35,7 @@ public class Board : NetworkBehaviour
             NetworkServer.Spawn(character);
            
         }
+        
             randomIndex = UnityEngine.Random.Range(0,5);
             senate = Instantiate(Senate, new Vector3(spawnPoints[randomIndex].transform.position.x, spawnPoints[randomIndex].transform.position.y + 1, spawnPoints[randomIndex].transform.position.z), spawnPoints[randomIndex].transform.rotation);
             senatePosition = senate.transform.position;
