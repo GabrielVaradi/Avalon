@@ -64,8 +64,10 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
      
      public void showSenateOptions()
      {
+
       Debug.Log(players.Length);
       foreach(GameObject player in players)
+      
       {
 
        sendOnMission.gameObject.SetActive(true);
