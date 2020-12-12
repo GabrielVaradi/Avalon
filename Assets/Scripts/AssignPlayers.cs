@@ -18,6 +18,8 @@ public class AssignPlayers : NetworkBehaviour
     // Update is called once per frame
     void Update() {}
 
+
+    // Assign the each roles with the player
     public GameObject AssignRoles(GameObject player) 
     {
         index = UnityEngine.Random.Range(0,characters.Count-1);
