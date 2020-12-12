@@ -22,6 +22,7 @@ public class Board : NetworkBehaviour
     // Update is called once per frame
     void Update() {}
 
+    //Spawn the playing board, all characters and the senate
     public void spawnBoard() 
     {
         for (int i = 0; i < 6; i++) 
