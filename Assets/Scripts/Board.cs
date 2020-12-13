@@ -25,7 +25,7 @@ public class Board : NetworkBehaviour
     //Spawn the playing board
     public void spawnBoard() 
     {
-        //Spawn all characters
+        // Spawn all characters
         for (int i = 0; i < 6; i++) 
         {
             index = UnityEngine.Random.Range(0,characterList.Count-1);
@@ -38,6 +38,7 @@ public class Board : NetworkBehaviour
            
         }
         
+            // Spawn the senate
             randomIndex = UnityEngine.Random.Range(0,5);
             senate = Instantiate(Senate, new Vector3(spawnPoints[randomIndex].transform.position.x, spawnPoints[randomIndex].transform.position.y + 1, spawnPoints[randomIndex].transform.position.z), spawnPoints[randomIndex].transform.rotation);
             senatePosition = senate.transform.position;
