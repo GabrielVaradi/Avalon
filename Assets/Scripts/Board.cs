@@ -22,9 +22,10 @@ public class Board : NetworkBehaviour
     // Update is called once per frame
     void Update() {}
 
-    //Spawn the playing board, all characters and the senate
+    //Spawn the playing board
     public void spawnBoard() 
     {
+        //Spawn all characters
         for (int i = 0; i < 6; i++) 
         {
             index = UnityEngine.Random.Range(0,characterList.Count-1);
