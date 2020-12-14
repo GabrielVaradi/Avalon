@@ -15,6 +15,7 @@ public class HidePlayers : MonoBehaviour
     private GameObject Palpatine;
     private GameObject Vader;
 
+    // Hide other players to the local player
     public void HideRoles(Vector3 playerPosition, GameObject SpawnPoints, GameObject character)
     {
         Obiwan = GameObject.FindWithTag("Obiwan");
