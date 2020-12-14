@@ -11,6 +11,7 @@ public class JoinLobbyMenu : MonoBehaviour
     [SerializeField] private TMP_InputField ipAddressInputField = null;
     [SerializeField] private Button joinButton;
 
+    // Calling this to join the lobby
     public void JoinLobby()    
     {
         string ipAddress = ipAddressInputField.text;
