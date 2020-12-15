@@ -52,6 +52,7 @@ public class MainMenu : MonoBehaviour
         //         }
     }
 
+    // Host the lobby when clicking on create game
     public void HostLobby()
     {
         networkManager.StartHost();
