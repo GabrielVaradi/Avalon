@@ -35,6 +35,7 @@ public class MainMenu : MonoBehaviour
         //         }
     }
 
+    // Quit to desktop
     public void QuitGame()
     {
         Application.Quit();
