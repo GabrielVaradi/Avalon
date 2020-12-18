@@ -21,6 +21,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
        Invoke("StartGame", 1);
     }
 
+    // Start Game
      void StartGame()
      {
        GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
