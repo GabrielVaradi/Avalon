@@ -22,13 +22,14 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     }
 
     // Start Game
-     void StartGame()
-     {
-       GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
-        senatePosition = FindObjectOfType<Board>().senatePosition;
+    void StartGame()
+    {
 
+      GameObject SpawnPoints = GameObject.FindWithTag("SpawnPoints");
+      senatePosition = FindObjectOfType<Board>().senatePosition;
+
+        // Assign and hide roles for each local player
         if (isLocalPlayer)
-
         {
 
           character = FindObjectOfType<AssignPlayers>().AssignRoles(gameObject);
