@@ -64,6 +64,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
        players = GameObject.FindGameObjectsWithTag("NetworkGamePlayer");
      }
      
+     // Show options if you are the senate
      public void showSenateOptions()
      {
 
