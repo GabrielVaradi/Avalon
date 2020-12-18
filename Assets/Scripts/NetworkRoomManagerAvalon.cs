@@ -30,6 +30,7 @@ public class NetworkRoomManagerAvalon : NetworkRoomManager
     public static event Action<NetworkConnection> OnServerReadied;
 
 
+    // Change scene when the game starts
     public void StartGame()
     {
         if(SceneManager.GetActiveScene().name == "Lobby")
