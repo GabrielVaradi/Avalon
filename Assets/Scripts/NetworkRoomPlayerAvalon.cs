@@ -39,6 +39,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
         }
     }
 
+    // Change ready status in lobby
     public void OnReadyClick()
     
     {
@@ -62,6 +63,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
 
     public void HandleDisplayNameChanged(string oldValue, string newValue) => UpdateDisplay();
 
+    // Update display for every client
     private void UpdateDisplay()
     {
         if (!hasAuthority)
