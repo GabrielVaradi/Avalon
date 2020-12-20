@@ -3,7 +3,4 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 
-public class GameManager : MonoBehaviour
-{
-
-}
+public class GameManager : MonoBehaviour {}
