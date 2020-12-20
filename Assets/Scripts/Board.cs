@@ -35,7 +35,6 @@ public class Board : NetworkBehaviour
             characterList.RemoveAt(index);
 
             NetworkServer.Spawn(character);
-           
         }
         
             // Spawn the senate
