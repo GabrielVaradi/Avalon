@@ -110,6 +110,7 @@ public class NetworkRoomPlayerAvalon : NetworkRoomPlayer
         startGameButton.gameObject.SetActive(true);
     }
 
+    // Press to leave lobby
     public void LeaveLobby()
     {
         room.StopHost();
