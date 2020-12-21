@@ -5,6 +5,7 @@ using Mirror;
 
 public class Board : NetworkBehaviour
 {
+    
     private int index;
     private int randomIndex;
     public List<GameObject> characterList = new List<GameObject>();
@@ -42,6 +43,6 @@ public class Board : NetworkBehaviour
             senate = Instantiate(Senate, new Vector3(spawnPoints[randomIndex].transform.position.x, spawnPoints[randomIndex].transform.position.y + 1, spawnPoints[randomIndex].transform.position.z), spawnPoints[randomIndex].transform.rotation);
             senatePosition = senate.transform.position;
             NetworkServer.Spawn(senate);
-            
+
     }
 }
