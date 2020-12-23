@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class AssignPlayers : NetworkBehaviour
 {
-
     private GameObject character;
     [SyncVar]
     private List<string> characters = new List<string>() { "Obiwan", "Yoda", "Windu", "QuiGon", "Palpatine", "Vader" };

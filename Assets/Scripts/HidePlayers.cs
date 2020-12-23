@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HidePlayers : MonoBehaviour
 {
-
     public GameObject hiddenPlayer;
     public GameObject yodaOrVader;
     public GameObject evilAlly;
