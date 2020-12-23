@@ -12,13 +12,6 @@ public class AssignPlayers : NetworkBehaviour
     private string randomCharacter;
     private int index;
 
-    // Start is called before the first frame update
-    void Start() {}
-
-    // Update is called once per frame
-    void Update() {}
-
-
     // Assign the each roles with the player
     public GameObject AssignRoles(GameObject player) 
     {
