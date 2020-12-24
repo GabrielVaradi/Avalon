@@ -18,5 +18,6 @@ public class JoinLobbyMenu : MonoBehaviour
 
         networkManager.networkAddress = ipAddress;
         networkManager.StartClient();
+        
     }
 }
