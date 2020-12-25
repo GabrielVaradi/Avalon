@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class JoinLobbyMenu : MonoBehaviour
 {
     [SerializeField] private NetworkRoomManagerAvalon networkManager = null;
