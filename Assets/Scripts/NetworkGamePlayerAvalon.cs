@@ -54,9 +54,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
           {
             showSenateOptions();
           }
-
         }
-
      }
 
      void Update()
