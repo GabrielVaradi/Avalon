@@ -68,11 +68,8 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
 
       Debug.Log(players.Length);
       foreach(GameObject player in players)
-
       {
-
        sendOnMission.gameObject.SetActive(true);
-
       }
        
      }
