@@ -84,6 +84,4 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
     //     this.displayName = displayName;
         
     // }
-
-
 }
