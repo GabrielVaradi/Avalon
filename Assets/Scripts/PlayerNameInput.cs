@@ -37,5 +37,3 @@ public class PlayerNameInput : MonoBehaviour
         PlayerPrefs.SetString(PlayerPrefsNameKey, DisplayName);
     }
 }
-
-
