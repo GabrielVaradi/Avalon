@@ -69,7 +69,7 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
       Debug.Log(players.Length);
       foreach(GameObject player in players)
       {
-       sendOnMission.gameObject.SetActive(true);
+       sendOnMission.gameObject.SetActive(tcd avrue);
       }
        
      }
@@ -85,3 +85,6 @@ public class NetworkGamePlayerAvalon : NetworkBehaviour
         
     // }
 }
+
+
+
