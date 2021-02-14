@@ -40,10 +40,3 @@ public class PlayerNameInput : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
